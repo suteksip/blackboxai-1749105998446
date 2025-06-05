@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>baca biar paham</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      background-color: #f9f9f9;
+      color: #000;
+    }
+    .retro-border {
+      border: 3px solid black;
+      box-shadow: 4px 4px 0 0 black;
+    }
+    .retro-button {
+      border: 3px solid black;
+      background-color: #e0e0e0;
+      box-shadow: 4px 4px 0 0 black;
+      transition: all 0.2s ease-in-out;
+    }
+    .retro-button:hover {
+      background-color: #c0c0c0;
+      box-shadow: 2px 2px 0 0 black;
+      transform: translate(2px, 2px);
+    }
+    .overlap-container > * {
+      margin-left: -2rem;
+      border: 3px solid black;
+      box-shadow: 4px 4px 0 0 black;
+      background-color: white;
+      position: relative;
+      z-index: 10;
+      transition: z-index 0.3s ease;
+    }
+    .overlap-container > *:hover {
+      z-index: 20;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Top Navigation -->
+  <nav class="bg-gray-300 retro-border flex items-center justify-between px-6 py-3 text-sm font-semibold select-none">
+    <div class="flex items-center space-x-4">
+      <div class="retro-border p-1 flex items-center justify-center w-8 h-8 font-bold text-lg">B</div>
+      <a href="#" class="hover:underline">Proyek</a>
+      <a href="#" class="hover:underline">Blog</a>
+      <a href="#" class="hover:underline">Belajar</a>
+      <a href="#" class="hover:underline">Tentang</a>
+      <a href="#" class="hover:underline">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- Main Intro Section -->
+  <header class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12">
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <h1 class="text-5xl font-extrabold mb-4">Halo.<br>Selamat Datang.</h1>
+      <p class="mb-6 max-w-md text-lg leading-relaxed">
+        Selamat datang di portal pembelajaran berita. Mari belajar memahami dan menganalisis berita dengan lebih baik.
+      </p>
+      <button class="retro-button px-6 py-2 font-bold cursor-pointer">Mulai Belajar</button>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+      <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-none">
+        <rect width="200" height="200" fill="#000"/>
+        <circle cx="100" cy="100" r="80" stroke="#fff" stroke-width="10"/>
+        <circle cx="100" cy="100" r="40" fill="#fff"/>
+        <circle cx="100" cy="100" r="20" fill="#000"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Quick Links -->
+  <section class="bg-gray-300 retro-border max-w-6xl mx-auto px-6 py-4 mb-12 flex space-x-4 select-none">
+    <a href="#" class="flex-1 retro-border px-4 py-2 text-center font-semibold hover:underline">Blog</a>
+    <a href="#" class="flex-1 retro-border px-4 py-2 text-center font-semibold hover:underline">Proyek</a>
+    <a href="#" class="flex-1 retro-border px-4 py-2 text-center font-semibold hover:underline">Tentang</a>
+    <a href="#" class="flex-1 retro-border px-4 py-2 text-center font-semibold hover:underline">Kontak</a>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="max-w-6xl mx-auto px-6 mb-12">
+    <h2 class="text-3xl font-extrabold mb-6 select-none">Proyek Terbaru</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <article class="retro-border p-4 bg-white select-none">
+        <div class="flex justify-between items-center mb-2 text-xs font-mono">
+          <span>⚫⚪</span>
+          <span>2020-04-08-proyek.html</span>
+        </div>
+        <h3 class="font-bold text-xl mb-2">Analisis Berita Harian</h3>
+        <p class="text-sm leading-relaxed mb-4">
+          Pembelajaran tentang cara menganalisis berita harian dengan metode yang sistematis. Memahami sudut pandang, fakta, dan opini dalam sebuah berita untuk mendapatkan pemahaman yang lebih baik.
+        </p>
+        <button class="retro-button px-4 py-1 font-semibold cursor-pointer">Lihat Proyek</button>
+      </article>
+      <article class="retro-border p-4 bg-white select-none">
+        <div class="flex justify-between items-center mb-2 text-xs font-mono">
+          <span>⚫⚪</span>
+          <span>2020-04-08-proyek.html</span>
+        </div>
+        <h3 class="font-bold text-xl mb-2">Teknik Membaca Berita</h3>
+        <p class="text-sm leading-relaxed mb-4">
+          Panduan lengkap tentang teknik membaca berita yang efektif. Mulai dari memahami judul, menganalisis isi, hingga mengambil kesimpulan yang tepat dari sebuah berita.
+        </p>
+        <button class="retro-button px-4 py-1 font-semibold cursor-pointer">Lihat Proyek</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="max-w-6xl mx-auto px-6 mb-12">
+    <h2 class="text-3xl font-extrabold mb-4 select-none">Artikel Terbaru</h2>
+    <a href="#" class="text-sm underline mb-6 inline-block select-none">Lihat semua artikel</a>
+    <div class="overlap-container flex flex-wrap gap-4">
+      <article class="w-64 p-4 retro-border bg-white select-none">
+        <div class="flex justify-between items-center mb-2 text-xs font-mono">
+          <span>⚫⚪</span>
+          <span>2020-04-07-blog.pdf</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Berita" class="mb-2 w-full h-32 object-cover" />
+        <p class="text-sm leading-relaxed">
+          Tips memahami berita dengan lebih baik: Panduan lengkap untuk pembaca pemula dalam menganalisis berita.
+        </p>
+      </article>
+      <article class="w-64 p-4 retro-border bg-white select-none">
+        <div class="flex justify-between items-center mb-2 text-xs font-mono">
+          <span>⚫⚪</span>
+          <span>2020-04-06-blog.pdf</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=400&q=80" alt="Kota" class="mb-2 w-full h-32 object-cover" />
+        <p class="text-sm leading-relaxed">
+          Mengenal struktur berita: Bagaimana cara membedakan fakta dan opini dalam sebuah artikel berita.
+        </p>
+      </article>
+      <article class="w-64 p-4 retro-border bg-white select-none">
+        <div class="flex justify-between items-center mb-2 text-xs font-mono">
+          <span>⚫⚪</span>
+          <span>2020-04-06-blog.pdf</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="Interior" class="mb-2 w-full h-32 object-cover" />
+        <p class="text-sm leading-relaxed">
+          Pentingnya literasi media: Mengapa kita perlu kritis dalam membaca berita di era digital.
+        </p>
+      </article>
+      <article class="w-64 p-4 retro-border bg-white select-none">
+        <div class="flex justify-between items-center mb-2 text-xs font-mono">
+          <span>⚫⚪</span>
+          <span>2020-04-06-blog.pdf</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Cahaya" class="mb-2 w-full h-32 object-cover" />
+        <p class="text-sm leading-relaxed">
+          Panduan membaca berita online: Cara memverifikasi kebenaran berita di media sosial.
+        </p>
+      </article>
+    </div>
+  </section>
+
+</body>
+</html>
